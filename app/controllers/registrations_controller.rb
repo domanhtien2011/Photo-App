@@ -59,7 +59,7 @@ class RegistrationsController < Devise::RegistrationsController
   def payment
     @payment ||= Payment.new(
       email:    params['user']['email'],
-      token:    params[:payment]['token'],
+      token:    params[:Payment]['token'],
       user_id:  resource.id
     )
   end
